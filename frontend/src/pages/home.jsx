@@ -1,5 +1,5 @@
 import Header from "../components/Header"
-import { LuUtensilsCrossed, LuClock, FaHeart } from "react-icons/lu";
+import { LuUtensilsCrossed, LuClock, LuHeart} from "react-icons/lu";
 export default function Home() {
 
     return (
@@ -31,7 +31,7 @@ export default function Home() {
                     <p>Seu pedido chega rápido e quente.</p>
                 </div>
                 <div>
-                    <h2><FaHeart /> AMIZADE SEMPRE</h2>
+                    <h2><LuHeart /> AMIZADE SEMPRE</h2>
                     <p>Compartilhe momentos incríveis com amigos e familiares.</p>
                 </div>
             </div>
