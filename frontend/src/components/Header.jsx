@@ -1,4 +1,5 @@
 import "../styles/header.css"
+import { FaCartPlus } from "react-icons/fa6";
 
 export default function Header() {
 
@@ -12,7 +13,7 @@ export default function Header() {
                 <button className="header-button">Comidas</button>
                 <button className="header-button">Bebidas</button>
                 <button className="header-button">Minha Conta</button>
-                <button className="header-button">Carrinho</button>
+                <button className="header-button"><FaCartPlus /> Carrinho </button>
 
             </div>
 
