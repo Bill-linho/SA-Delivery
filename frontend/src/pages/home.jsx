@@ -1,7 +1,9 @@
 import Header from "../components/Header"
 import "../styles/home.css"
+import {useNavigate} from "react-router-dom"
 import { LuUtensilsCrossed, LuClock, LuHeart, LuBeer } from "react-icons/lu";
 export default function Home() {
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -17,7 +19,8 @@ export default function Home() {
 
                 <div className="home-hero-buttons">
                     <button className="home-hero-button">Fazer Pedido</button>
-                    <button className="home-hero-button">Criar Conta</button>
+                    <button  className="home-hero-button" onClick={() => navigate("/login")}>Criar Conta</button>
+                    //trocar o botão de login para redirecionar ao cadastro
                 </div>
 
             </seaction>
