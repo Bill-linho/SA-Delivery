@@ -1,4 +1,5 @@
 import Header from "../components/Header"
+import "../styles/home.css"
 import { LuUtensilsCrossed, LuClock, LuHeart, LuBeer } from "react-icons/lu";
 export default function Home() {
 
@@ -47,6 +48,12 @@ export default function Home() {
                 </div>
 
             </seaction>
+
+            <footer>
+                <p><LuHeart /> FEITO COM AMOR</p>
+                <p>BAR DA AMIZADE</p>
+                <p>FEITO PARA COMPARTILHAR BONS MOMENTOS</p>
+            </footer>
 
         </div>
     )
