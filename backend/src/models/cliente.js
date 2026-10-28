@@ -17,6 +17,10 @@ const Cliente = sequelize.define("Cliente", {
     allowNull: false,
     unique: true
   },
+  senha:{
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   telefone: DataTypes.STRING,
   endereco: DataTypes.STRING,
 }, {
