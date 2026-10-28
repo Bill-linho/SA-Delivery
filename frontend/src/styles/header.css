@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #d30c22, #e52c22, #f74220);
+    color: white;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-left: 12px;
+}
+
+header span {
+    font-family: 'Poppins', sans-serif;
+}
+
+.beer-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.header-button {
+    padding: 10px 16px;
+    border: 1px solid white;
+    border-radius: 6px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.header-button:hover {
+    background: white;
+    color: #d30c22;
+}

@@ -1,0 +1,138 @@
+.login-page,
+.cadastro-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    background: #fff5f0;
+    box-sizing: border-box;
+}
+
+.login-main,
+.cadastro-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-card,
+.cadastro-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.login-card h1,
+.cadastro-card h1 {
+    color: #d30c22;
+    text-align: center;
+    font-size: 25px;
+    margin: 0 0 10px;
+}
+
+.login-subtitle,
+.cadastro-subtitle {
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.login-form,
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-field,
+.cadastro-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.login-field label,
+.cadastro-field label {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-field input,
+.cadastro-field input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.login-field input:focus,
+.cadastro-field input:focus {
+    border-color: #e52c22;
+}
+
+.login-button,
+.cadastro-button {
+    margin-top: 8px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #d30c22, #e52c22, #f74220);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover,
+.cadastro-button:hover {
+    opacity: 0.85;
+}
+
+.login-register,
+.cadastro-login {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+.login-register a,
+.cadastro-login a {
+    color: #d30c22;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-register a:hover,
+.cadastro-login a:hover {
+    text-decoration: underline;
+}
+
+.cadastro-voltar {
+    display: block;
+    margin: 15px auto 0;
+    border: none;
+    background: transparent;
+    color: #d30c22;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+
+    .login-card,
+    .cadastro-card {
+        padding: 22px;
+    }
+
+    .login-card h1,
+    .cadastro-card h1 {
+        font-size: 21px;
+    }
+}
