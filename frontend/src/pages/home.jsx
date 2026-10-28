@@ -9,7 +9,7 @@ export default function Home() {
         <div>
             <Header />
 
-            <seaction className="home-hero">
+            <section className="home-hero">
                 <h2>O SEU BOTECO, ONDE VOCÊ ESTIVER</h2>
                 <h1>COMIDA BOA.</h1>
                 <h1>BEBIDA GELADA.</h1>
@@ -23,9 +23,9 @@ export default function Home() {
                     //trocar o botão de login para redirecionar ao cadastro
                 </div>
 
-            </seaction>
+            </section>
 
-            <seaction className="home-review">
+            <section className="home-review">
                 <div>
                     <h2><LuUtensilsCrossed /> FEITO NA HORA</h2>
                     <p>Capricho em cada porção.</p>
@@ -38,9 +38,9 @@ export default function Home() {
                     <h2><LuHeart /> AMIZADE SEMPRE</h2>
                     <p>Compartilhe momentos incríveis com amigos e familiares.</p>
                 </div>
-            </seaction>
+            </section>
 
-            <seaction className="home-invitation">
+            <section className="home-invitation">
 
                 <h2>PODE CHEGAR, A CASA É SUA</h2>
                 <h1>O QUE VAI SER HOJE?</h1>
@@ -50,7 +50,7 @@ export default function Home() {
                     <button className="home-invitation-button"><LuBeer />UM BRINDE AOS BONS MOMENTOS<p>CHOPP, DRINKS E OPÇÕES SEM ÁLCOOL</p></button>
                 </div>
 
-            </seaction>
+            </section>
 
             <footer>
                 <p><LuHeart /> FEITO COM AMOR</p>
