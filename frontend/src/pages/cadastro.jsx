@@ -1,8 +1,36 @@
 import { useNavigate } from "react-router-dom";
+import { cadastrarUsuario } from "../services/cadastroService";
 import '../styles/auth.css';
 
 
 export default function Cadastro() {
+    async function handleCadastro(event) {
+    event.preventDefault();
+
+    const formulario = event.target;
+
+    const dados = {
+        nome: formulario.nome.value,
+        email: formulario.email.value,
+        telefone: formulario.telefone.value,
+        endereco: formulario.endereco.value,
+        senha: formulario.password.value,
+    };
+
+    try {
+        await cadastrarUsuario(dados);
+
+        alert("Cadastro realizado com sucesso!");
+        formulario.reset();
+    } catch (error) {
+        console.error("Erro ao cadastrar:", error);
+
+        alert(
+            error.response?.data?.message ||
+            "Não foi possível realizar o cadastro."
+        );
+    }
+}
     const navigate = useNavigate();
 
     return (
@@ -16,7 +44,7 @@ export default function Cadastro() {
                         Crie sua conta e aproveite o Bar da Amizade.
                     </p>
 
-                    <form className="cadastro-form">
+                    <form className="cadastro-form"  onSubmit={handleCadastro}>
 
                         <div className="cadastro-field">
                             <label htmlFor="nome">Nome de usuário</label>
