@@ -1,0 +1,77 @@
+name: DOCKER-L
+
+services:
+
+  database:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+    volumes:
+      - postgres-data:/var/lib/postgres
+    networks:
+      - imsi-2026
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U $${DB_USER} -d $${DB_NAME}
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      target: backend
+    image: imsi-backend:1.0
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_HOST: database
+      DB_NAME: ${DB_NAME}
+      DB_PORT: ${DB_PORT}
+    networks:
+      - imsi-2026
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      database:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      target: frontend
+    image: imsi-frontend:1.0
+    networks:
+      - imsi-2026
+    ports:
+      - "5757:5757"
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget --no-vebose --tries=1 --spider http://localhost:5757 || exit 1
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+
+networks:
+  imsi-2026:
