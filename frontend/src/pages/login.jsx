@@ -1,9 +1,8 @@
-import Header from "../components/Header"
+import '../styles/auth.css';
 
 export default function Login() {
     return (
         <div className="login-page">
-            <Header />
             <main className="login-main">
                 <section className="login-card">
                     <h1>QUE BOM TER VOCÊ AQUI!</h1>

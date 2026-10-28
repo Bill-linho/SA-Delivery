@@ -19,8 +19,7 @@ export default function Home() {
 
                 <div className="home-hero-buttons">
                     <button className="home-hero-button">Fazer Pedido</button>
-                    <button  className="home-hero-button" onClick={() => navigate("/login")}>Criar Conta</button>
-                    //trocar o botão de login para redirecionar ao cadastro
+                    <button  className="home-hero-button" onClick={() => navigate("/cadastro")}>Criar Conta</button>
                 </div>
 
             </section>
