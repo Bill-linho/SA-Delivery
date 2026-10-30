@@ -13,7 +13,7 @@ export default function Header() {
             <h1>BAR DA <span>AMIZADE</span></h1>
 
             <div className="header-buttons">
-                <button className="header-button">Comidas</button>
+                <button className="header-button" onClick={() => navigate("/menu")}>Comidas</button>
                 <button className="header-button" onClick={() => navigate("/login")}>Minha Conta</button>
                 <button className="header-button"><FaCartPlus /> Carrinho </button>
 

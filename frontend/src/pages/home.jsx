@@ -18,7 +18,7 @@ export default function Home() {
                 <h2>Escolha seus favoritos e deixe o resto com a gente.</h2>
 
                 <div className="home-hero-buttons">
-                    <button className="home-hero-button">Fazer Pedido</button>
+                    <button className="home-hero-button" onClick={() => navigate("/menu")}>Fazer Pedido</button>
                     <button  className="home-hero-button" onClick={() => navigate("/cadastro")}>Criar Conta</button>
                 </div>
 
@@ -45,8 +45,14 @@ export default function Home() {
                 <h1>O QUE VAI SER HOJE?</h1>
 
                 <div className="home-invitation-buttons">
-                    <button className="home-invitation-button"><LuUtensilsCrossed />UMA PORÇÃO DE FELICIDADE<p>PETISCOS, BURGUERS E CLÁSSICOS DO BAR</p></button>
-                    <button className="home-invitation-button"><LuBeer />UM BRINDE AOS BONS MOMENTOS<p>CHOPP, DRINKS E OPÇÕES SEM ÁLCOOL</p></button>
+                    <button className="home-invitation-button" onClick={() => navigate("/menu")}>
+                        <LuUtensilsCrossed />UMA PORÇÃO DE FELICIDADE
+                        <p>PETISCOS, BURGUERS E CLÁSSICOS DO BAR</p>
+                    </button>
+                    <button className="home-invitation-button" onClick={() => navigate("/menu")}>
+                        <LuBeer />UM BRINDE AOS BONS MOMENTOS
+                        <p>CHOPP, DRINKS E OPÇÕES SEM ÁLCOOL</p>
+                    </button>
                 </div>
 
             </section>
