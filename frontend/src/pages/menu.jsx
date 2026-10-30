@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { bebidas, comidas } from "../services/produtoService";
+import { IoArrowBack } from "react-icons/io5";
 import "../styles/menu.css";
 
 export default function Menu() {
@@ -41,6 +42,9 @@ export default function Menu() {
 
     return (
         <main className="menu-page">
+            <button onClick={() => window.history.back()}>
+                <IoArrowBack />
+            </button>
 
             <h1>Nosso Menu</h1>
 

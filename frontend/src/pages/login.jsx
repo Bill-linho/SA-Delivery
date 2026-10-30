@@ -38,6 +38,7 @@ export default function Login() {
 
     return (
         <div className="login-page">
+           
             <main className="login-main">
                 <section className="login-card">
                     <h1>QUE BOM TER VOCÊ AQUI!</h1>
@@ -77,6 +78,14 @@ export default function Login() {
                     <p className="login-register">
                         Ainda não tem uma conta?{" "}
                         <a href="/cadastro">Criar conta</a>
+                    </p>
+                    <p className="login-voltar">
+                        <a href="/" onClick={(e) => {
+                            e.preventDefault();
+                            window.history.back();
+                        }}>
+                            Voltar ao início
+                        </a>
                     </p>
                 </section>
             </main>

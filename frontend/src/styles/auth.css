@@ -124,6 +124,20 @@
     cursor: pointer;
 }
 
+.login-voltar {
+    display: block;
+    margin: 15px auto 0;
+    border: none;
+    background: transparent;
+    color: #d30c22;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #d30c22;
+}
+
 @media (max-width: 480px) {
 
     .login-card,
