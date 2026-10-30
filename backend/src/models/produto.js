@@ -15,6 +15,7 @@ const Produto = sequelize.define("Produto", {
   descricao: DataTypes.STRING,
   preco: DataTypes.DECIMAL(10, 2),
   categoria: DataTypes.STRING,
+  url: DataTypes.STRING,
 }, {
   tableName: "produto",
   timestamps: false,

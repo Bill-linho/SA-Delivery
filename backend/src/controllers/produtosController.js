@@ -1,4 +1,4 @@
-import Produto from "../models/Produto.js";
+import Produto from "../models/produto.js";
 
 export async function listarBebidas(req, res) {
   try {

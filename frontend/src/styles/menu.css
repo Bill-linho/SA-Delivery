@@ -44,6 +44,13 @@
     background-color: white;
 }
 
+.menu-item-imagem {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .menu-item h3 {
     margin-bottom: 10px;
 }
