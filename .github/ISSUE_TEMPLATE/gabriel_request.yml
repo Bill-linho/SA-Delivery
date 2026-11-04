@@ -1,0 +1,38 @@
+name: "👤 Gabriel"
+description: "💬 Deixe um comentário sobre o Gabriel"
+title: "[👤 GABRIEL] "
+labels: ["question"]
+assignees: ["gabriel"]
+
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: "💬 O que você acha dele?"
+      description: "Deixe um comentário sobre o Gabriel."
+      placeholder: "O que você gostaria de dizer?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: xingamento
+    attributes:
+      label: "Deixe um xingamento a ele"
+      description: "Adicione um xingamento sobre o Gabriel."
+    validations:
+      required: false
+
+  - type: textarea
+    id: esperava
+    attributes:
+      label: "O que você esperava dele?"
+      description: "Deixe um comentário sobre o que você esperava do Gabriel."
+    validations:
+      required: false
+  - type: textarea
+    id: nota
+    attributes:
+      label: "📎 Nota de 0 a 10 sobre o Gabriel."
+      description: "Avalie o Gabriel de 0 a 10."
+    validations:
+      required: true

@@ -1,6 +1,6 @@
-name: Relatar um bug
-description: Informe um erro encontrado no sistema
-title: "[BUG] "
+name: "🐛 Relatar um bug"
+description: "🚨 Informe um erro encontrado no sistema."
+title: "[🐛 BUG] "
 labels: ["bug"]
 assignees: []
 
@@ -8,17 +8,17 @@ body:
   - type: textarea
     id: descricao
     attributes:
-      label: Descrição do bug
-      description: Descreva o erro encontrado.
-      placeholder: O que aconteceu?
+      label: "🐛 Descrição do bug"
+      description: "Descreva o erro encontrado."
+      placeholder: "O que aconteceu?"
     validations:
       required: true
 
   - type: textarea
     id: reproducao
     attributes:
-      label: Como reproduzir?
-      description: Informe os passos para reproduzir o erro.
+      label: "🔄 Como reproduzir?"
+      description: "Informe os passos para reproduzir o erro."
       placeholder: |
         1. Acesse...
         2. Clique em...
@@ -29,23 +29,23 @@ body:
   - type: textarea
     id: esperado
     attributes:
-      label: Comportamento esperado
-      description: O que deveria acontecer?
+      label: "✅ Comportamento esperado"
+      description: "O que deveria acontecer?"
     validations:
       required: true
 
   - type: textarea
     id: atual
     attributes:
-      label: Comportamento atual
-      description: O que acontece atualmente?
+      label: "❌ Comportamento atual"
+      description: "O que acontece atualmente?"
     validations:
       required: true
 
   - type: textarea
     id: adicionais
     attributes:
-      label: Informações adicionais
-      description: Adicione prints ou outras informações relevantes.
+      label: "📸 Informações adicionais"
+      description: "Adicione prints ou outras informações relevantes."
     validations:
       required: false
