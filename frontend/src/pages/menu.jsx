@@ -65,6 +65,7 @@ export default function Menu() {
                     <div className="menu-lista">
                         {listaComidas.map((comida) => (
                             <article className="menu-item" key={comida.id}>
+                                <img src={comida.imagem} alt={comida.nome} />
                                 <h3>{comida.nome}</h3>
                                 <p>{comida.descricao}</p>
                                 <p>
@@ -77,6 +78,7 @@ export default function Menu() {
                     <div className="menu-lista">
                         {listaBebidas.map((bebida) => (
                             <article className="menu-item" key={bebida.id}>
+                                <img src={bebida.imagem} alt={bebida.nome} />
                                 <h3>{bebida.nome}</h3>
                                 <p>{bebida.descricao}</p>
                                 <p>
