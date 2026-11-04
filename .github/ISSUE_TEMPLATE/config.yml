@@ -1,3 +1,6 @@
 blank_issues_enabled: true
 
-contact_links: []
+contact_links:
+  - name: "📞 Canal de Atendimento exclusivo"
+    url: https://youtu.be/dQw4w9WgXcQ
+    about: "💬 Clique aqui para entrar em contato com nossa equipe de suporte."
