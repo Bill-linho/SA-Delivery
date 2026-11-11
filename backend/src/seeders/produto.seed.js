@@ -4,250 +4,437 @@ import sequelize from "../config/database.js";
 import Produto from "../models/produto.js";
 
 const produtos = [
-  // DRINKS
+  // BEBIDAS - CERVEJAS
   {
-    nome: "Caipirinha",
-    descricao: "Drink de cachaça, limão, açúcar e gelo",
-    preco: 18.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=500",
+    nome: "Heineken 600ml",
+    descricao: "Cerveja puro malte, sabor marcante e refrescante.",
+    preco: 16.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1608270586620-248524c67de9"
   },
   {
-    nome: "Caipiroska de morango",
-    descricao: "Drink de vodka, morango, açúcar e gelo",
+    nome: "Heineken Long Neck",
+    descricao: "Cerveja premium em garrafa de 330ml.",
+    preco: 10.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1608270586620-248524c67de9"
+  },
+  {
+    nome: "Original 600ml",
+    descricao: "Cerveja pilsen leve e equilibrada.",
+    preco: 14.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1535958636474-b021ee887b13"
+  },
+  {
+    nome: "Brahma Duplo Malte 600ml",
+    descricao: "Cerveja com sabor maltado e amargor equilibrado.",
+    preco: 13.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1535958636474-b021ee887b13"
+  },
+  {
+    nome: "Skol 600ml",
+    descricao: "Cerveja pilsen leve e tradicional.",
+    preco: 12.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1608270586620-248524c67de9"
+  },
+  {
+    nome: "Budweiser Long Neck",
+    descricao: "Cerveja americana de sabor suave, 330ml.",
+    preco: 10.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1535958636474-b021ee887b13"
+  },
+  {
+    nome: "Corona Long Neck",
+    descricao: "Cerveja mexicana leve e refrescante, 330ml.",
+    preco: 12.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1608270586620-248524c67de9"
+  },
+  {
+    nome: "Stella Artois Long Neck",
+    descricao: "Cerveja premium de sabor equilibrado, 330ml.",
+    preco: 11.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1535958636474-b021ee887b13"
+  },
+  {
+    nome: "Amstel 600ml",
+    descricao: "Cerveja puro malte de sabor suave.",
+    preco: 13.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1608270586620-248524c67de9"
+  },
+
+  // BEBIDAS - DRINKS
+  {
+    nome: "Caipirinha de Limão",
+    descricao: "Cachaça, limão, açúcar e gelo.",
+    preco: 18.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
+  },
+  {
+    nome: "Caipirinha de Morango",
+    descricao: "Cachaça, morangos frescos, açúcar e gelo.",
+    preco: 20.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
+  },
+  {
+    nome: "Caipiroska de Limão",
+    descricao: "Vodka, limão, açúcar e gelo.",
+    preco: 20.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
+  },
+  {
+    nome: "Caipiroska de Morango",
+    descricao: "Vodka, morangos frescos, açúcar e gelo.",
     preco: 22.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1536935338788846bb9981813?w=500",
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
+  },
+  {
+    nome: "Gin Tropical",
+    descricao: "Gin, água tônica, laranja e frutas tropicais.",
+    preco: 26.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a"
+  },
+  {
+    nome: "Gin com Morango",
+    descricao: "Gin, morangos frescos, água tônica e gelo.",
+    preco: 25.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a"
   },
   {
     nome: "Mojito",
-    descricao: "Drink de rum, limão, hortelã, açúcar e água com gás",
+    descricao: "Rum, limão, hortelã, açúcar e água com gás.",
+    preco: 22.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1556679343-c7306c1976bc"
+  },
+  {
+    nome: "Moscow Mule",
+    descricao: "Vodka, limão e xarope de gengibre.",
+    preco: 25.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
+  },
+  {
+    nome: "Sex on the Beach",
+    descricao: "Vodka, licor de pêssego, suco de laranja e cranberry.",
     preco: 24.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=500",
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
   },
   {
-    nome: "Gin tônica",
-    descricao: "Drink de gin, água tônica e limão",
-    preco: 26.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1571950006415-6d4b9a2b1f0a?w=500",
-  },
-
-  // REFRIGERANTES
-  {
-    nome: "Coca-Cola",
-    descricao: "Refrigerante de cola, lata 350 ml",
-    preco: 6.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=500",
+    nome: "Piña Colada",
+    descricao: "Rum, leite de coco e suco de abacaxi.",
+    preco: 24.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1544145945-f90425340c7e"
   },
   {
-    nome: "Coca-Cola Zero",
-    descricao: "Refrigerante de cola sem açúcar, lata 350 ml",
-    preco: 6.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=500",
-  },
-  {
-    nome: "Guaraná Antarctica",
-    descricao: "Refrigerante de guaraná, lata 350 ml",
-    preco: 6.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=500",
-  },
-  {
-    nome: "Sprite",
-    descricao: "Refrigerante de limão, lata 350 ml",
-    preco: 6.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1625772299848-391b6a4e6e2e?w=500",
-  },
-  {
-    nome: "Fanta Laranja",
-    descricao: "Refrigerante de laranja, lata 350 ml",
-    preco: 6.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1624517452488-04869289c4ca?w=500",
-  },
-  {
-    nome: "Fanta Uva",
-    descricao: "Refrigerante de uva, lata 350 ml",
-    preco: 6.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1624517452488-04869289c4ca?w=500",
+    nome: "Aperol Spritz",
+    descricao: "Aperol, espumante, água com gás e laranja.",
+    preco: 27.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
   },
 
-  // ÁGUAS
+  // BEBIDAS - DOSES
   {
-    nome: "Água mineral sem gás",
-    descricao: "Água mineral natural, garrafa 500 ml",
-    preco: 3.50,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=500",
+    nome: "Dose de Whisky Red Label",
+    descricao: "Dose de whisky escocês servido puro ou com gelo.",
+    preco: 18.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1527281400683-1aae777175f8"
   },
   {
-    nome: "Água mineral com gás",
-    descricao: "Água mineral gaseificada, garrafa 500 ml",
-    preco: 4.50,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1564419320461-6870880221ad?w=500",
+    nome: "Dose de Whisky Black Label",
+    descricao: "Dose de whisky escocês envelhecido.",
+    preco: 28.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1527281400683-1aae777175f8"
+  },
+  {
+    nome: "Dose de Vodka",
+    descricao: "Dose de vodka tradicional.",
+    preco: 12.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
+  },
+  {
+    nome: "Dose de Gin",
+    descricao: "Dose de gin tradicional servido com gelo.",
+    preco: 15.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a"
+  },
+  {
+    nome: "Dose de Cachaça",
+    descricao: "Dose de cachaça artesanal brasileira.",
+    preco: 8.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1527281400683-1aae777175f8"
+  },
+  {
+    nome: "Dose de Tequila",
+    descricao: "Dose de tequila prata.",
+    preco: 16.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1527281400683-1aae777175f8"
+  },
+  {
+    nome: "Dose de Rum",
+    descricao: "Dose de rum tradicional.",
+    preco: 13.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1527281400683-1aae777175f8"
   },
 
-  // CERVEJAS
+  // BEBIDAS - VINHOS
   {
-    nome: "Heineken",
-    descricao: "Cerveja Pilsen, long neck 330 ml",
+    nome: "Taça de Vinho Tinto",
+    descricao: "Taça de vinho tinto seco da casa.",
+    preco: 18.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3"
+  },
+  {
+    nome: "Taça de Vinho Branco",
+    descricao: "Taça de vinho branco suave e refrescante.",
+    preco: 18.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3"
+  },
+  {
+    nome: "Garrafa de Vinho Tinto",
+    descricao: "Vinho tinto seco, garrafa de 750ml.",
+    preco: 65.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3"
+  },
+  {
+    nome: "Garrafa de Vinho Branco",
+    descricao: "Vinho branco suave, garrafa de 750ml.",
+    preco: 65.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3"
+  },
+  {
+    nome: "Taça de Espumante",
+    descricao: "Espumante brut servido gelado.",
+    preco: 22.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
+  },
+
+  // BEBIDAS - REFRIGERANTES
+  {
+    nome: "Coca-Cola 350ml",
+    descricao: "Refrigerante Coca-Cola tradicional em lata.",
+    preco: 6.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e"
+  },
+  {
+    nome: "Coca-Cola Zero 350ml",
+    descricao: "Refrigerante Coca-Cola sem açúcar em lata.",
+    preco: 6.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e"
+  },
+  {
+    nome: "Guaraná Antarctica 350ml",
+    descricao: "Refrigerante de guaraná em lata.",
+    preco: 6.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e"
+  },
+  {
+    nome: "Fanta Laranja 350ml",
+    descricao: "Refrigerante de laranja em lata.",
+    preco: 6.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e"
+  },
+  {
+    nome: "Sprite 350ml",
+    descricao: "Refrigerante de limão em lata.",
+    preco: 6.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e"
+  },
+
+  // BEBIDAS - SUCOS E OUTRAS BEBIDAS
+  {
+    nome: "Água Mineral 500ml",
+    descricao: "Água mineral sem gás.",
+    preco: 4.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1564419320461-6870880221ad"
+  },
+  {
+    nome: "Água com Gás 500ml",
+    descricao: "Água mineral gaseificada.",
+    preco: 5.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1564419320461-6870880221ad"
+  },
+  {
+    nome: "Suco de Laranja",
+    descricao: "Suco natural de laranja feito na hora.",
     preco: 10.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500",
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1600271886742-f049cd451bba"
   },
   {
-    nome: "Budweiser",
-    descricao: "Cerveja American Lager, long neck 330 ml",
+    nome: "Suco de Limão",
+    descricao: "Suco natural de limão gelado.",
     preco: 9.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500",
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
   },
   {
-    nome: "Corona Extra",
-    descricao: "Cerveja Premium Lager, long neck 330 ml",
+    nome: "Suco de Maracujá",
+    descricao: "Suco natural de maracujá.",
+    preco: 10.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1600271886742-f049cd451bba"
+  },
+  {
+    nome: "Suco de Morango",
+    descricao: "Suco de morango preparado na hora.",
     preco: 12.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1623934199716-dc28818a6f4b?w=500",
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1600271886742-f049cd451bba"
   },
   {
-    nome: "Stella Artois",
-    descricao: "Cerveja Premium Lager, long neck 330 ml",
-    preco: 11.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500",
+    nome: "Limonada Suíça",
+    descricao: "Limão batido com água, açúcar e gelo.",
+    preco: 12.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4"
   },
   {
-    nome: "Original",
-    descricao: "Cerveja Pilsen, garrafa 600 ml",
+    nome: "Energético Red Bull",
+    descricao: "Bebida energética em lata de 250ml.",
     preco: 13.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500",
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1622543925917-763c34d1a86e"
   },
   {
-    nome: "Brahma Duplo Malte",
-    descricao: "Cerveja Puro Malte, garrafa 600 ml",
-    preco: 12.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500",
-  },
-  {
-    nome: "Skol",
-    descricao: "Cerveja Pilsen, lata 350 ml",
-    preco: 6.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500",
-  },
-  {
-    nome: "Amstel",
-    descricao: "Cerveja Puro Malte, lata 350 ml",
+    nome: "Água Tônica",
+    descricao: "Água tônica gelada em lata.",
     preco: 7.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500",
-  },
-
-  // CHOPP
-  {
-    nome: "Chopp Pilsen 300 ml",
-    descricao: "Chopp Pilsen gelado, copo de 300 ml",
-    preco: 9.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=500",
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1564419320461-6870880221ad"
   },
   {
-    nome: "Chopp Pilsen 500 ml",
-    descricao: "Chopp Pilsen gelado, copo de 500 ml",
-    preco: 14.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=500",
-  },
-
-  // ENERGÉTICOS
-  {
-    nome: "Red Bull",
-    descricao: "Energético tradicional, lata 250 ml",
-    preco: 12.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1610878180933-123728745d22?w=500",
-  },
-  {
-    nome: "Monster Energy",
-    descricao: "Energético tradicional, lata 473 ml",
-    preco: 13.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=500",
-  },
-  {
-    nome: "Red Bull Tropical",
-    descricao: "Energético sabor tropical, lata 250 ml",
-    preco: 12.00,
-    categoria: "bebida",
-    url: "https://images.unsplash.com/photo-1610878180933-123728745d22?w=500",
+    nome: "Chá Gelado de Pêssego",
+    descricao: "Chá gelado sabor pêssego.",
+    preco: 8.00,
+    categoria: "Bebidas",
+    url_imagem: "https://images.unsplash.com/photo-1556679343-c7306c1976bc"
   },
 
   // COMIDAS
   {
-    nome: "Batata frita",
-    descricao: "Porção de batatas fritas crocantes",
-    preco: 25.00,
-    categoria: "comida",
-    url: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500",
+    nome: "Batata Frita",
+    descricao: "Porção de batatas fritas crocantes.",
+    preco: 28.00,
+    categoria: "Comidas",
+    url_imagem: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877"
   },
   {
-    nome: "Hambúrguer simples",
-    descricao: "Pão, carne de hambúrguer e queijo",
-    preco: 10.00,
-    categoria: "comida",
-    url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500",
+    nome: "Batata com Cheddar e Bacon",
+    descricao: "Batatas fritas cobertas com cheddar e bacon.",
+    preco: 38.00,
+    categoria: "Comidas",
+    url_imagem: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877"
   },
   {
-    nome: "Porção de camarões",
-    descricao: "Porção de camarões preparados na manteiga e alho",
-    preco: 120.00,
-    categoria: "comida",
-    url: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=500",
+    nome: "Iscas de Frango",
+    descricao: "Tiras de frango empanadas e crocantes.",
+    preco: 32.00,
+    categoria: "Comidas",
+    url_imagem: "https://images.unsplash.com/photo-1562967914-608f82629710"
   },
   {
-    nome: "Anéis de cebola",
-    descricao: "Porção de anéis de cebola empanados e crocantes",
+    nome: "Calabresa Acebolada",
+    descricao: "Linguiça calabresa frita com cebola.",
     preco: 30.00,
-    categoria: "comida",
-    url: "https://images.unsplash.com/photo-1639024471283-03518883512d?w=500",
+    categoria: "Comidas",
+    url_imagem: "https://images.unsplash.com/photo-1544025162-d76694265947"
   },
+  {
+    nome: "Mandioca Frita",
+    descricao: "Porção de mandioca frita e crocante.",
+    preco: 25.00,
+    categoria: "Comidas",
+    url_imagem: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877"
+  },
+  {
+    nome: "Iscas de Peixe",
+    descricao: "Iscas de peixe empanadas, acompanhadas de limão.",
+    preco: 38.00,
+    categoria: "Comidas",
+    url_imagem: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2"
+  },
+  {
+    nome: "Bolinho de Bacalhau",
+    descricao: "Bolinho de bacalhau artesanal servido em porção.",
+    preco: 36.00,
+    categoria: "Comidas",
+    url_imagem: "https://images.unsplash.com/photo-1547592180-85f173990554"
+  },
+  {
+    nome: "Frango à Passarinho",
+    descricao: "Pedaços de frango temperados e fritos.",
+    preco: 35.00,
+    categoria: "Comidas",
+    url_imagem: "https://images.unsplash.com/photo-1562967914-608f82629710"
+  },
+  {
+    nome: "Amendoim Torrado",
+    descricao: "Porção de amendoim torrado e levemente salgado.",
+    preco: 12.00,
+    categoria: "Comidas",
+    url_imagem: "https://images.unsplash.com/photo-1567892737950-30c4db37cd89"
+  }
 ];
 
-async function popularProdutos() {
+async function executarSeed() {
   try {
-    console.log("Testando conexão com o banco...");
-
     await sequelize.authenticate();
-    console.log("Conexão estabelecida!");
 
-    await Produto.sync();
-    console.log("Tabela produto verificada!");
+    console.log("Conexão com o banco estabelecida!");
 
-    const quantidade = await Produto.count();
+    for (const produto of produtos) {
+      const existente = await Produto.findOne({
+        where: { nome: produto.nome }
+      });
 
-    if (quantidade > 0) {
-      console.log(`A tabela já possui ${quantidade} produtos.`);
-      console.log("Nenhum produto novo foi inserido.");
-      return;
+      if (existente) {
+        await existente.update(produto);
+      } else {
+        await Produto.create(produto);
+      }
     }
 
-    await Produto.bulkCreate(produtos);
-
-    console.log(`${produtos.length} produtos cadastrados com sucesso!`);
+    console.log(`${produtos.length} produtos cadastrados ou atualizados!`);
   } catch (erro) {
-    console.error("Erro ao popular produtos:", erro.message);
+    console.error("Erro ao executar seed:", erro);
   } finally {
     await sequelize.close();
   }
 }
 
-popularProdutos();
+executarSeed();

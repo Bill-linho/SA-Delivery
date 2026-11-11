@@ -103,16 +103,8 @@ export default function Menu() {
                 {categoria === "comidas" ? (
                     <div className="menu-lista">
                         {listaComidas.map((comida) => (
-                            <article
-                                className="menu-item"
-                                key={comida.id_produto}
-                            >
-                                <img
-                                    src={comida.url}
-                                    alt={comida.nome}
-                                    className="menu-item-imagem"
-                                />
-
+                            <article className="menu-item" key={comida.id}>
+                                <img src={comida.imagem} alt={comida.nome} />
                                 <h3>{comida.nome}</h3>
                                 <p>{comida.descricao}</p>
 
@@ -134,16 +126,8 @@ export default function Menu() {
                 ) : (
                     <div className="menu-lista">
                         {listaBebidas.map((bebida) => (
-                            <article
-                                className="menu-item"
-                                key={bebida.id_produto}
-                            >
-                                <img
-                                    src={bebida.url}
-                                    alt={bebida.nome}
-                                    className="menu-item-imagem"
-                                />
-
+                            <article className="menu-item" key={bebida.id}>
+                                <img src={bebida.imagem} alt={bebida.nome} />
                                 <h3>{bebida.nome}</h3>
                                 <p>{bebida.descricao}</p>
 

@@ -1,0 +1,39 @@
+name: "✨ Solicitar funcionalidade"
+description: "💡 Sugira uma nova funcionalidade para o projeto."
+title: "[✨ FEATURE] "
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: "✨ Descrição da funcionalidade"
+      description: "Descreva a funcionalidade que deseja adicionar."
+      placeholder: "O que você gostaria de implementar?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: "❓ Problema relacionado"
+      description: "Qual problema essa funcionalidade resolveria?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucao
+    attributes:
+      label: "💡 Solução sugerida"
+      description: "Como você imagina que essa funcionalidade deveria funcionar?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: adicionais
+    attributes:
+      label: "📎 Informações adicionais"
+      description: "Adicione imagens ou outras informações relevantes."
+    validations:
+      required: false
