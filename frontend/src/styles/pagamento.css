@@ -1,0 +1,87 @@
+
+.pagamento-page {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.pagamento-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.pagamento-header button {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.pagamento-endereco,
+.pagamento-metodos,
+.pagamento-resumo,
+.pagamento-sucesso {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.pagamento-endereco textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    resize: vertical;
+}
+
+.pagamento-opcao {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.pagamento-opcao p {
+    margin: 5px 0 0;
+}
+
+.pagamento-produto,
+.pagamento-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+}
+
+.pagamento-total {
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.pagamento-confirmar,
+.pagamento-sucesso button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.pagamento-confirmar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.pagamento-erro {
+    color: #c62828;
+    margin-bottom: 15px;
+}
+
+.pagamento-sucesso {
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoArrowBack, IoTrashOutline } from "react-icons/io5";
 import {
     listarCarrinho,
@@ -9,6 +10,8 @@ import {
 import "../styles/carrinho.css";
 
 export default function Carrinho() {
+    const navigate = useNavigate();
+
     const [produtos, setProdutos] = useState([]);
     const [carregando, setCarregando] = useState(true);
     const [erro, setErro] = useState("");
@@ -226,15 +229,10 @@ export default function Carrinho() {
 
                         <button
                             className="carrinho-finalizar"
-                            disabled
-                            title="A etapa de pagamento será implementada depois"
+                            onClick={() => navigate("/pagamento")}
                         >
                             Continuar para pagamento
                         </button>
-
-                        <p className="carrinho-aviso">
-                            A etapa de pagamento será disponibilizada em breve.
-                        </p>
                     </aside>
 
                 </div>
