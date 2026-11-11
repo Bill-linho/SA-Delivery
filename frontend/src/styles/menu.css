@@ -44,10 +44,34 @@
     background-color: white;
 }
 
+.menu-item-imagem {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .menu-item h3 {
     margin-bottom: 10px;
 }
 
 .menu-item p {
     margin: 8px 0;
+}
+.menu-item button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-item button:hover {
+    background: #555;
+}
+
+.menu-item button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }

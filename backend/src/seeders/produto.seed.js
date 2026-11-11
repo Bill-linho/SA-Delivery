@@ -1,6 +1,7 @@
+
 import "dotenv/config";
 import sequelize from "../config/database.js";
-import Produto from "../models/Produto.js";
+import Produto from "../models/produto.js";
 
 const produtos = [
   // BEBIDAS - CERVEJAS

@@ -18,10 +18,11 @@ export default function Login() {
         try {
             const resposta = await fazerLogin(dados);
 
-            // Salva o token caso o backend retorne um.
-            if (resposta.data.token) {
-                localStorage.setItem("token", resposta.data.token);
-            }
+            // Salva os dados do cliente
+            localStorage.setItem(
+                "cliente",
+                JSON.stringify(resposta.data.cliente)
+            );
 
             alert("Login realizado com sucesso!");
 
@@ -38,6 +39,7 @@ export default function Login() {
 
     return (
         <div className="login-page">
+
             <main className="login-main">
                 <section className="login-card">
                     <h1>QUE BOM TER VOCÊ AQUI!</h1>
@@ -77,6 +79,14 @@ export default function Login() {
                     <p className="login-register">
                         Ainda não tem uma conta?{" "}
                         <a href="/cadastro">Criar conta</a>
+                    </p>
+                    <p className="login-voltar">
+                        <a href="/" onClick={(e) => {
+                            e.preventDefault();
+                            window.history.back();
+                        }}>
+                            Voltar ao início
+                        </a>
                     </p>
                 </section>
             </main>
