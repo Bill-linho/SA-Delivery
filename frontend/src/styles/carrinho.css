@@ -1,0 +1,151 @@
+
+.carrinho-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f5f5f5;
+    color: #222;
+}
+
+.carrinho-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.carrinho-header h1 {
+    margin: 0;
+}
+
+.carrinho-voltar {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.carrinho-contador {
+    margin-left: auto;
+    color: #777;
+}
+
+.carrinho-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.carrinho-produtos,
+.carrinho-resumo {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carrinho-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.carrinho-item-imagem {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carrinho-item-info {
+    flex: 1;
+}
+
+.carrinho-item-info h3,
+.carrinho-item-info p {
+    margin: 5px 0;
+}
+
+.carrinho-item-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+.carrinho-item-acoes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.carrinho-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.carrinho-quantidade button,
+.carrinho-remover {
+    cursor: pointer;
+}
+
+.carrinho-remover {
+    border: none;
+    background: none;
+    color: red;
+    font-size: 18px;
+}
+
+.carrinho-item-subtotal {
+    white-space: nowrap;
+}
+
+.carrinho-resumo-linha,
+.carrinho-resumo-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.carrinho-resumo-total {
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 18px;
+}
+
+.carrinho-finalizar {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #999;
+    color: white;
+    cursor: not-allowed;
+}
+
+.carrinho-aviso {
+    color: #777;
+    font-size: 12px;
+    text-align: center;
+}
+
+.carrinho-vazio {
+    padding: 50px 20px;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.carrinho-vazio button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 750px) {
+    .carrinho-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .carrinho-item {
+        flex-wrap: wrap;
+    }
+}

@@ -15,8 +15,9 @@ export default function Header() {
             <div className="header-buttons">
                 <button className="header-button" onClick={() => navigate("/menu")}>Comidas</button>
                 <button className="header-button" onClick={() => navigate("/login")}>Minha Conta</button>
-                <button className="header-button"><FaCartPlus /> Carrinho </button>
-
+                <button className="header-button" onClick={() => navigate("/carrinho")}>
+                    <FaCartPlus /> Carrinho
+                </button>
             </div>
 
         </header>
