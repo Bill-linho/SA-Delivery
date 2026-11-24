@@ -3,7 +3,7 @@ import Produto from "../models/produto.js";
 export async function listarBebidas(req, res) {
   try {
     const bebidas = await Produto.findAll({
-      where: { categoria: "bebida" },
+      where: { categoria: "Bebidas" },
     });
 
     return res.status(200).json(bebidas);
@@ -19,7 +19,7 @@ export async function listarBebidas(req, res) {
 export async function listarComidas(req, res) {
   try {
     const comidas = await Produto.findAll({
-      where: { categoria: "comida" },
+      where: { categoria: "Comidas" },
     });
 
     return res.status(200).json(comidas);
